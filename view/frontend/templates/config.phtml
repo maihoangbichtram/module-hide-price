@@ -1,0 +1,10 @@
+<?php
+/**
+ * Copyright © Panca, Inc. All rights reserved.
+ */
+
+/** @var $block \Panca\HidePrice\Block\Config */
+/** @var \Magento\Framework\View\Helper\SecureHtmlRenderer $secureRenderer */
+?>
+<?= /* @noEscape */ $secureRenderer->renderTag('script', [], 'window.hideprice = ' .
+    /* @noEscape */ $block->getSerializedHidePriceConfig(), false); ?>

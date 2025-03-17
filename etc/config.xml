@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Panca, Inc. All rights reserved.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <hide_price>
+            <general>
+                <enabled>0</enabled>
+                <price_text></price_text>
+                <disable_add_to_cart>0</disable_add_to_cart>
+            </general>
+            <price_load>
+                <load_base_price>0</load_base_price>
+                <load_tier_price>0</load_tier_price>
+                <load_minimal_price>0</load_minimal_price>
+                <load_final_price>0</load_final_price>
+            </price_load>
+        </hide_price>
+    </default>
+</config>

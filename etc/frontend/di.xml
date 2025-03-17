@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Panca, Inc. All rights reserved.
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Catalog\Pricing\Render\FinalPriceBox">
+        <plugin name="price_hide" type="Panca\HidePrice\Plugin\Pricing\Render\FinalPriceBox" sortOrder="1" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Pricing\Price\BasePrice">
+        <plugin name="simplifyBasePriceLoad" type="Panca\HidePrice\Pricing\Price\Plugin\SimpleBasePrice" sortOrder="1" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Model\Layer\Category\CollectionFilter">
+        <plugin name="simplifyCollectionFilter" type="Panca\HidePrice\Model\Layer\Category\Plugin\SimpleCollectionFilter" sortOrder="1" disabled="false"/>
+    </type>
+    <type name="Magento\Catalog\Pricing\Price\TierPrice">
+        <plugin name="simplifyTierPrice" type="Panca\HidePrice\Pricing\Price\Plugin\SimpleTierPrice" sortOrder="1" disabled="false"/>
+    </type>
+    <type name="Panca\HidePrice\Model\CompositeConfigProvider">
+        <arguments>
+            <argument name="configProviders" xsi:type="array">
+                <item name="custom_config_provider" xsi:type="object">Panca\HidePrice\Model\DefaultConfigProvider</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
