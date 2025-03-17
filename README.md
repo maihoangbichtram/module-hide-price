@@ -11,4 +11,6 @@ Price Load
   comparison among these prices can add positive effect to the page performance.
   - Final Price uses the value of Base Price. In case, Final Price is not used at all, it's good practice to simplify how it is loaded.
 
+Detailed module guide and explanation:
+[User guide](./panca-hide-price-100.0.0-user-guide.pdf)
 
